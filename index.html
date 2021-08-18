@@ -1,3 +1,19 @@
+<?php
+
+
+if($_POST["message"]) {
+
+
+mail("your@email.address", "Here is the subject line",
+
+
+$_POST["insert your message here"]. "From: an@email.address");
+
+
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,11 +28,10 @@
 <div class="header">
     <h1 class="title"><a href="/">Buckeye Bullmastiffs</a></h1>
     <div class="inline">
-        <a class="extra" href="/">Home</a>
-        <a class="extra" href="/apply.html">Puppies For Sale</a>
-        <a class="extra" href="/about.html">About Our Dogs</a>
-        <a class="extra" href="/care.html">Care and Keeping</a>
-      </div>
+        <a class="current" style="display:inline-block;" href="/">Home</a>
+        <a class="extra" style="display:inline-block;" href="/litter.html">Current Litter</a>
+        <a class="extra" style="display:inline-block;" href="/care.html">Care and Keeping</a>
+    </div>
 </div>
 
 <div class="section">
@@ -30,25 +45,39 @@
     <!-- <div class="extra" style="min-height:212px;"> -->
 <p><ul>
 <li>a bullmastiff that is flexible around anything and everything...</li>
-
 <li>a bullmastiff that will be a joy to the whole family, both indoors and out...</li>
-
 <li>a bullmastiff of excellent conformation and storied bloodlines, but recognize that doing genetic and multi-organ specialist testing is mostly a money sink and brings a false sense of security...</li>
 </ul>
 
 <br/>
 <h3>Then welcome to Buckeye Bullmastiffs</h3>
-<p>Located in Dayton Ohio, our dogs are OFA hip certified and come from pedigrees that do not have characteristic genetic trends that produce subpar results. We breed for correct conformation, excellent health, exceptional temperament, and the ease and flexibility of adjusting to a wide range of environments and interactions. In order to achieve these goals and maintain our high standards, we purposefully limit ourselves to remain a small, family-oriented, and family-run breeder.</p>
-<p>Please feel free to contact us at any time to set up a home visit and see for yourself how our dogs are a part of our family. :)</p>
-</div>
+<p>Located in Dayton Ohio, our dogs are OFA hip certified and come from pedigrees that do not have characteristic genetic trends that produce subpar results. We breed for correct conformation, excellent health, exceptional temperament, and the ease and flexibility of adjusting to a wide range of environments and interactions. In order to achieve these goals and maintain our high standards, we purposefully limit ourselves to remain a small, family-oriented, and family-run breeder. Details concerning our most recent litter can be found in the <a class="extra" style="display:inline-block;" href="/litter.html">Current Litter</a> section.</p>
+<p>Please feel free to contact us at any time. We would be happy to set up a time for you to visit us so that you can experience these wonderful dogs first-hand. You may contact us directly using email, text, phone call, or the form below.</p>
+    <strong style="margin-left:15px">Email:</strong> <a href= "mailto:BuckeyeBullmastiffs@gmail.com">BuckeyeBullmastiffs@gmail.com</a><br />
+    <strong style="margin-left:15px">Phone:</strong> <a href="tel:555-123-4567">(555) 123-4567</a><br />
 
-<div class="section">
-    <h2>
-        <div class="inline">The Bullmastiff</div>
-    </h2>
-    <div class="extra" style="min-height:212px;">
-        <p>Originally from England in 1860, the Bullmastiff is a cross between old English Mastiff and old English Bulldog. The bullmastiff was bred to capture and hold poachers for the gamekeepers of an estate. As such, these dogs are well-known for their speed, strength, and endurance. Yet, despite this somewhat fearsome history, these dogs are also excellent and devoted family pets: obedient, courageous, tolerant of children and other animals, and instinctively ready to guard that which they feel belongs to the home. As with all dogs, the character of your dog depends on their breeding, temperament, and their training environment from the day they are born. Firm training and establishing boundaries is the key to ensuring a successful integration into the home environment.
-    </div>
+<br>
+<form method="post" name="form" action="mailto:BuckeyeBullmastiffs@gmail.com" enctype=”multipart/form-data”>
+    <table style="width:100%;border:0;">
+        <tr>
+            <td style="width: 10px;"><label>Name:</label></td>
+            <td><input name="name" type="text" value="" maxlength="100" tabindex="null" style="width:100%;"></td>
+        </tr>
+        <tr>
+            <td><label>Email:</label></td>
+            <td><input name="email" type="email" value="" maxlength="100" tabindex="null" style="width:100%;"></td>
+        </tr>
+        <tr>
+            <td><label>Phone:</label></td>
+            <td><input name="tel" type="tel" value="" maxlength="100" tabindex="null" style="width:100%;"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><textarea name="text" wrap="hard" tabindex="null" style="width:100%;height:57px;resize:vertical;">Questions</textarea></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
 </div>
 
 <div class="footer">

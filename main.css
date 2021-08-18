@@ -255,6 +255,25 @@ div.image-wide img {
   align-content: center;
 }
 
+.height_fixed::after {
+  content: "";
+  clear: both;
+  display: table;
+  align-content: center;
+}
+
+@media only all and (min-device-width: 1151px) {
+    .height_fixed {
+      height:330px;
+    }
+}
+
+@media only all and (max-device-width: 1150px) {
+  .height_fixed {
+    height:auto;
+  }
+}
+
 .column_2 {
   float: left;
   width: 50%;
